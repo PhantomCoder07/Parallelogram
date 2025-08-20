@@ -78,7 +78,7 @@ int main()
         scanf("%f",&h);
         area=b*h;
         peri=2*(a+b);
-        printf("The area of parallelogram: %.2f\nThe perimeter of parallelogram: %.2f\n",area,peri);
+        fprintf(file1,"The area of parallelogram: %.2f\nThe perimeter of parallelogram: %.2f\n",area,peri);
         fclose (file1);
     }
     if (file2==NULL)
