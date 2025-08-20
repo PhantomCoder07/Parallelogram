@@ -2,8 +2,10 @@
 int main()
 {
     float a,b,height,area,peri;
-    printf("Enter parallelogram's side values: ");
-    scanf("%f %f",&a,&b);
+    printf("Enter parallelogram's base: ");
+    scanf("%f",&b);
+    printf("Enter parallelogram's another side: ");
+    scanf("%f",&a);
     printf("Enter parallelogram's hight: ");
     scanf("%f",&height);
     area=b*height;
