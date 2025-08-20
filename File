@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main()
+{
+    FILE *file1,*file2;
+    float a,b,h,area,peri;
+    char ch;
+    file1 = fopen ("Square.txt","w");
+    file2 = fopen ("Square.txt","r");
+    if (file1==NULL)
+        printf ("The file does not exist");
+    else
+    {
+        printf("Enter parallelogram's base: ");
+        scanf("%f",&b);
+        printf("Enter parallelogram's another side: ");
+        scanf("%f",&a);
+        printf("Enter parallelogram's hight: ");
+        scanf("%f",&h);
+        area=b*h;
+        peri=2*(a+b);
+        printf("The area of parallelogram: %.2f\nThe perimeter of parallelogram: %.2f\n",area,peri);
+        fclose (file1);
+    }
+    if (file2==NULL)
+        printf ("The file does not exist");
+    else
+    {
+        while (!feof(file2))
+        {
+            ch=fgetc(file2);
+            printf ("%c",ch);
+        }
+        fclose (file2);
+    }
+    return 0;
+}
