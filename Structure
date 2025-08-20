@@ -1,0 +1,20 @@
+#include <stdio.h>
+struct parallelogram
+{
+    float a,b,h,area,peri;
+};
+int main()
+{
+    struct parallelogram pa;
+    printf("Enter parallelogram's base: ");
+    scanf("%f",&pa.b);
+    printf("Enter parallelogram's another side: ");
+    scanf("%f",&pa.a);
+    printf("Enter parallelogram's hight: ");
+    scanf("%f",&pa.h);
+    pa.area=pa.b*pa.h;
+    pa.peri=2*(pa.a+pa.b);
+    printf("The area of parallelogram: %.2f\n",pa.area);
+    printf("The perimeter of parallelogram: %.2f\n",pa.peri);
+    return 0;
+}
